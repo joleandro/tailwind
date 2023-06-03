@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components{
+    // navbar
+    .flex-nav {
+     @apply flex justify-between xl:w-1/3 md:w-1/2 max-sm:w-1/2 items-center;
+    }
+    .flex-nav li a{
+        @apply relative pb-1 text-lg font-medium;
+        &:hover{
+            @apply text-slate-700;
+        }
+        &::before {
+            @apply content-[''] absolute bottom-0 w-full h-1 bg-black duration-700 scale-x-0;
+          }
+        &::before:hover{
+            @apply bg-slate-500 scale-x-100;
+        }
+    }
+    @media (max-width:480px) {
+        html{
+            font-size: 75%;
+        }
+        .flex-nav{
+            @apply w-2/3;
+        }
+    }
+
+}
