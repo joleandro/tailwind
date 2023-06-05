@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Project TailwindCss</title>
-  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="public/assets/css/style.css" rel="stylesheet">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <style>
-    @import url('./assets/scss/main.scss');
+    @import url('public/assets/scss/main.scss');
   </style>
 </head>
 <body class="dark:text-white overflow-hidden">
@@ -29,19 +29,19 @@
     <!-- hero content -->
     <section class="home" id="home">
         <div class="container mx-8 group h-screen flex xl:flex-nowrap md:flex-nowrap sm:flex-wrap max-[480px]:flex-col-reverse">
-            <div class="flex-initial flex max-[480px]:flex-col max-[480px]:items-center 2xl:pt-[10%] xl:pt-[13%] lg:[pt-15%] sm:pt-[20%]">
+            <div class="flex-initial flex flex-col 2xl:pt-[10%] xl:pt-[13%] lg:[pt-15%] sm:pt-[20%] max-[680px]:pt-[20%] max-[480px]:flex-col max-[480px]:items-center max-[480px]:pt-0">
                 <h1 class="text-4xl">Hy I'm Josua <span class="text-red-500 font-semibold"> Siagian</span></h1>
-                <p class="text-base my-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, saepe! Ipsa, delectus deleniti debitis odio beatae eius tempora eos sint?</p>
+                <p class="text-base my-4 max-[480px]:text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, saepe! Ipsa, delectus deleniti debitis odio beatae eius tempora eos sint?</p>
                 <div class="my-4">
                     <a href="#" class="block w-32 bg-slate-300 h-8 text-lg text-center rounded-full hover:ring-2 hover:ring-blue-200 hover:bg-red-500 hover:text-white transition ease-linear duration-200 dark:bg-slate-800">Call's Me</a>
                 </div>
             </div>
             <div class="flex-initial flex justify-center max-[480px]:-translate-x-1/4 max-[480px]:-translate-y-1/4">
-                <img src="assets/img/banner.png" alt="..." class="h-screen bg-cover bg-center max-[480px]:h-96">
+                <img src="public/assets/img/banner.png" alt="..." class="h-screen bg-cover bg-center max-[480px]:h-96">
             </div>
         </div>
     </section>
 
-    <script src="assets/js/script.js"></script>
+    <script src="public/assets/js/script.js"></script>
 </body>
 </html>
