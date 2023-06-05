@@ -10,18 +10,23 @@
     @import url('public/assets/scss/main.scss');
   </style>
 </head>
-<body class="dark:text-white">
+<body class="dark:text-white overflow-hidden">
     <!-- navbar -->
     <nav class="navigation" id="navigation">
         <div class="px-8 flex justify-between items-center">
             <h1 class="text-2xl font-semibold">Lo<span class="text-red-500">go.</span></h1>
+
+            <a href="#" class="text-2xl hidden max-[640px]:block"><i class='bx bx-menu' id="toggle-menu"></i></a>
 
             <ul class="flex-nav">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">My Recent</a></li>
                 <input type="checkbox" id="toggle-check" class="hidden">
-                <label for="toggle-check" class="border rounded-full border-black w-7 h-7 text-2xl flex justify-center items-center cursor-pointer hover:text-slate-400 duration-300 hover:border-slate-400 dark:border-white"><i class='bx bx-moon' id="icon-darkMode"></i></label>
+                <div class="flex justify-between gap-2 my-4">
+                    <label class="hidden max-[640px]:block font-semibold cursor-pointer" for="toggle-check">Theme</label>
+                    <label for="toggle-check" class="border rounded-full border-black w-7 h-7 relative text-2xl flex justify-center items-center cursor-pointer hover:text-slate-400 duration-300 hover:border-slate-400 dark:border-white"><i class='bx bx-moon' id="icon-darkMode"></i></label>
+                </div>
             </ul>
         </div>
     </nav>
@@ -30,7 +35,7 @@
     <section class="home" id="home">
         <div class="px-8 py-5 flex max-[600px]:flex-nowrap 2xl:h-screen max-[600px]:flex-col-reverse gap-8">
             <div class="flex-initial flex justify-center flex-col items-center">
-                <h1 class="text-3xl font-medium pb-4">My Name Is Josua <span class="text-red-500 dark:text-blue-500">Siagian</span></h1>
+                <h1 class="text-3xl font-medium pb-4 text-center">My Name Is Josua <span class="text-red-500 dark:text-blue-500">Siagian</span></h1>
                 <p class="text-sm font-semibold text-center pb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque quaerat ipsam dolore ipsum explicabo est aut expedita voluptatibus repellat voluptate.</p>
                 <button class="font-medium w-34 bg-green-500 p-4 rounded-full hover:ring-2 hover:ring-slate-600 dark:bg-green-700">Let's Call Me</button>
             </div>
@@ -40,6 +45,7 @@
         </div>
     </section>
 
+    
     <script src="public/assets/js/script.js"></script>
 </body>
 </html>

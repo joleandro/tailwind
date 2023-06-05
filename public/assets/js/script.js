@@ -8,17 +8,17 @@ toggle.addEventListener('click', () =>{
 
 // darkMode
 const icons = document.querySelector('#icon-darkMode');
-
 icons.addEventListener('click', () => {
     icons.classList.toggle('bx-sun');
 });
 
-const label = document.querySelector('label[for="toggle-check"]');
+// Mini Menu
+const menuToggle = document.querySelector('#toggle-menu');
+const menu = document.querySelector('.flex-nav');
+menuToggle.addEventListener('click', () =>{
+  menuToggle.classList.toggle('bx-x');
+  menuToggle.classList.toggle('bx-menu');
+  menuToggle.style.transition = 'all 2s ease';
 
-  label.addEventListener('focus', function() {
-    this.style.color = 'blue';
-  });
-
-  label.addEventListener('blur', function() {
-    this.style.color = '';
-  });
+  menu.classList.toggle('active');
+});
