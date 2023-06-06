@@ -1,6 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer base {
+  body {
+    @apply dark:text-white;
+  }
+}
 @layer components {
   .flex-nav {
     @apply flex justify-between w-1/2 items-center;
@@ -9,23 +14,23 @@
     @apply relative pb-1 text-lg font-medium;
   }
   .flex-nav li a:hover {
-    @apply text-slate-700;
+    @apply text-slate-700 dark:text-red-500;
   }
   .flex-nav li a::before {
     @apply content-[""] absolute bottom-0 w-full h-1 bg-black duration-700 scale-x-0;
   }
   .flex-nav li a::before:hover {
-    @apply bg-slate-500 scale-x-100;
+    @apply bg-slate-500 scale-x-100 dark:bg-red-500;
   }
   @media (max-width: 640px) {
     .flex-nav {
-      @apply flex flex-col items-center justify-start absolute top-[7%] -left-full bg-slate-500 ring-3 ring-blue-400;
+      @apply flex flex-col items-start absolute -left-full top-16 bg-slate-600 dark:bg-slate-950 w-screen duration-500 shadow-sm shadow-indigo-800;
     }
     .flex-nav li {
-      @apply py-2;
+      @apply py-2 px-8;
     }
     .flex-nav.active {
-      @apply right-0;
+      @apply left-0;
     }
   }
 }/*# sourceMappingURL=main.css.map */

@@ -1,1 +1,0 @@
-tailwindcss -i ./public/assets/css/main.css -o ./public/assets/css/style.css --watch
