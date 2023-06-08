@@ -6,6 +6,9 @@ module.exports = {
     extend: {
       screens:{
         'handphone' : '480px'
+      },
+      flex :{
+        'full' : '0 0 100%'
       }
     },
   },

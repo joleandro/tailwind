@@ -8,24 +8,25 @@
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <style>
     @import url('public/assets/scss/main.scss');
+
+
   </style>
 </head>
 <body>
     <!-- navbar -->
     <nav class="navigation" id="navigation">
-        <div class="px-8 flex justify-between items-center fixed w-screen max-sm:h-16" id="navbar">
+        <div class="px-8 flex justify-between items-center fixed z-50 w-screen max-sm:h-16" id="navbar">
             <h1 class="text-2xl font-semibold">Lo<span class="text-red-500">go.</span></h1>
 
             <a class="text-2xl hidden max-[640px]:block"><i class='bx bx-menu' id="toggle-menu"></i></a>
 
             <ul class="flex-nav" id="menuSlider">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#">My Recent</a></li>
+                <li><a href="#project">My Project</a></li>
                 <input type="checkbox" id="toggle-check" class="hidden">
                 <div class="flex justify-between gap-2 my-4 px-8">
                     <label class="hidden max-[640px]:block font-semibold cursor-pointer" for="toggle-check" id="theme">Theme</label>
-                    <label for="toggle-check" class="border rounded-full border-black w-7 h-7 relative text-2xl flex justify-center items-center cursor-pointer hover:text-slate-400 duration-300 hover:border-slate-400 dark:border-white"><i class='bx bx-moon' id="icon-darkMode"></i></label>
+                    <label for="toggle-check" class="border rounded-full border-black w-7 h-7 relative text-2xl flex justify-center items-center cursor-pointer duration-300 hover:border-black dark:border-white"><i class='bx bx-moon' id="icon-darkMode"></i></label>
                 </div>
             </ul>
         </div>
@@ -45,13 +46,46 @@
         </div>
     </section>
 
-    <!-- about -->
-    <section class="about" id="about">
-        <div class="container text-center py-16">
-            <h1 class="text-4xl font-semibold tracking-wider">About</h1>
+    <!-- project -->
+    <section class="project" id="project">
+        <div class="py-20 mx-8">
+            <h1 class="text-4xl font-semibold tracking-wider text-center mb-16">My <span class="text-red-500 dark:text-blue-600">Project</span></h1>
+
+            <!-- card session project -->
+                <div class="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item">
+                      <img src="https://source.unsplash.com/201x201/?computer" alt="..." >
+                      <div class="carousel-space">
+                        <h3>Project-1</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae commodi dolorum dolorem animi quaerat corporis cumque ab repellat saepe officiis!</p>
+                        <button>Go To Project</button>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <img src="https://source.unsplash.com/202x202/?computer" alt="..." >
+                      <div class="carousel-space">
+                        <h3>Project-2</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia, optio assumenda quam consectetur deserunt illo incidunt? Animi, obcaecati neque! Ex.</p>
+                        <button>Go To Project</button>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <img src="https://source.unsplash.com/203x203/?computer" alt="..." >
+                      <div class="carousel-space">
+                        <h3>Project-3</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque voluptatum hic quisquam architecto reprehenderit voluptates, veritatis obcaecati eligendi ipsam error?</p>
+                        <button>Go To Project</button>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="hidden max-sm:block max-sm:-translate-y-1/2 max-sm:absolute max-sm:top-1/4  max-sm:text-3xl max-sm:left-3 carousel-control prev">&#10094;</button>
+                  <button class="hidden max-sm:block max-sm:-translate-y-1/2 max-sm:absolute max-sm:top-1/4  max-sm:text-3xl max-sm:right-3 carousel-control next">&#10095;</button>
+                </div>
         </div>
+              
     </section>
-    
+
     <script src="public/assets/js/script.js"></script>
 </body>
 </html>

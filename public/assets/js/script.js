@@ -48,3 +48,40 @@ links.forEach(link => {
     menuToggle.classList.toggle('bx-menu');  
   });
 });
+
+// caraousel function
+const carousel = document.querySelector('.carousel');
+const prevButton = carousel.querySelector('.prev');
+const nextButton = carousel.querySelector('.next');
+const carouselInner = carousel.querySelector('.carousel-inner');
+const carouselItems = carouselInner.querySelectorAll('.carousel-item');
+
+let currentIndex = 0;
+
+function updateCarousel() {
+  const itemWidth = carouselItems[0].offsetWidth;
+  const translateX = -currentIndex * itemWidth;
+  carouselInner.style.transform = `translateX(${translateX}px)`;
+}
+
+function nextSlide() {
+  currentIndex++;
+  if (currentIndex >= carouselItems.length) {
+    currentIndex = 0;
+  }
+  updateCarousel();
+}
+
+function prevSlide() {
+  currentIndex--;
+  if (currentIndex < 0) {
+    currentIndex = carouselItems.length - 1;
+  }
+  updateCarousel();
+}
+
+prevButton.addEventListener('click', prevSlide);
+nextButton.addEventListener('click', nextSlide);
+
+updateCarousel();
+
