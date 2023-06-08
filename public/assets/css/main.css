@@ -2,9 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 @layer base {
-  html {
-    scroll-behavior: smooth;
-  }
   body {
     @apply dark:text-white;
   }
@@ -35,19 +32,28 @@
     @apply flex flex-col max-sm:flex-full;
   }
   .carousel .carousel-inner .carousel-item img {
-    @apply w-full cursor-pointer h-[200px] rounded-md hover:scale-[1.02] max-sm:w-[250px] max-sm:mx-auto;
+    @apply w-full cursor-pointer h-[200px] rounded-md shadow-md shadow-black hover:scale-[1.02] max-sm:w-[250px] max-sm:mx-auto max-[420px]:w-[200px] max-sm:dark:shadow-white;
   }
   .carousel .carousel-inner .carousel-item .carousel-space {
     @apply top-3;
   }
   .carousel .carousel-inner .carousel-item .carousel-space h3 {
-    @apply text-2xl text-center;
+    @apply text-2xl text-center pt-4;
   }
   .carousel .carousel-inner .carousel-item .carousel-space p {
     @apply py-2 max-sm:text-center;
   }
   .carousel .carousel-inner .carousel-item .carousel-space button {
     @apply bg-slate-300 p-4 font-medium rounded-md max-sm:block max-sm:mx-auto hover:bg-slate-400 dark:bg-slate-500 dark:hover:bg-slate-600;
+  }
+  .contact .container-form {
+    @apply flex flex-col w-3/4;
+  }
+  .contact .container-form input {
+    @apply ring-1 rounded-xl ring-slate-600 outline-none p-2 text-black;
+  }
+  .contact .container-form textarea {
+    @apply ring-1 rounded-xl ring-slate-600 outline-none w-full resize-none text-black p-2;
   }
   @media (max-width: 640px) {
     .flex-nav {

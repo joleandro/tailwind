@@ -35,12 +35,12 @@
         .carousel-item{
             @apply flex flex-col max-sm:flex-full;
             img{
-                @apply w-full cursor-pointer h-[200px] rounded-md hover:scale-[1.02] max-sm:w-[250px] max-sm:mx-auto;
+                @apply w-full cursor-pointer h-[200px] rounded-md shadow-md shadow-black hover:scale-[1.02] max-sm:w-[250px] max-sm:mx-auto max-[420px]:w-[200px] max-sm:dark:shadow-white;
             }
             .carousel-space{
                 @apply top-3;
                 h3{
-                    @apply text-2xl text-center;
+                    @apply text-2xl text-center pt-4;
                 }
                 p{
                     @apply py-2 max-sm:text-center;
@@ -51,6 +51,17 @@
             }
         }
     }
+
+    }
+
+    .contact .container-form{
+        @apply flex flex-col w-3/4;
+        input{
+            @apply ring-1 rounded-xl ring-slate-600 outline-none p-2 text-black;
+        }
+        textarea{
+            @apply ring-1 rounded-xl ring-slate-600 outline-none w-full resize-none text-black p-2;
+        }
     }
     
     @media (max-width:640px) {

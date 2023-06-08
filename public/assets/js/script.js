@@ -85,3 +85,13 @@ nextButton.addEventListener('click', nextSlide);
 
 updateCarousel();
 
+// validation number telephone indonesia
+function validateNumber(input) {
+  const number = input.value.trim();
+  const errorMessage = document.getElementById("error-message");
+
+  const isValid = /^(?:\+?62|0)(?:\d{3,4}-?){2}\d{4}$/.test(number);
+
+  errorMessage.textContent = isValid ? "" : "Invalid Indonesian phone number";
+  input.setCustomValidity(isValid ? "" : "Invalid Indonesian phone number");
+}
